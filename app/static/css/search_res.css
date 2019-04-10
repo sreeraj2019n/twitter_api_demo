@@ -1,0 +1,19 @@
+
+.container{
+    width:300px;
+}
+.alternate-color:nth-child(even){
+    background:#ccc;
+}
+.alternate-color:nth-child(odd){
+    background:rgb(182, 224, 204);
+}
+
+li{
+    display:inline;
+}
+
+.disabled a {
+    pointer-events:none; 
+    opacity:0.0;
+ }

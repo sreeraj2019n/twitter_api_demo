@@ -1,0 +1,19 @@
+.searchRow{
+    margin-top:200px;
+}
+
+.recentSearches{
+    border:dashed;
+    border-width: 1px;
+    width:360px;
+    height:300px;
+    margin-left: 10em;
+    margin-top: 10em;
+}
+
+.alternate-color:nth-child(even){
+    background:#ccc;
+}
+.alternate-color:nth-child(odd){
+    background:rgb(182, 224, 204);
+}

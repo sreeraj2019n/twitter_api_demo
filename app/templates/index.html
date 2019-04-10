@@ -1,0 +1,41 @@
+
+
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block head %}
+<head>
+{% block title %}
+    <title>
+    {% if title %}{{ title }}{% else %}Twitter Search{% endif %}
+    </title>
+{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+{% endblock %}
+
+{% block content %}
+    <div class="container">  
+        <div class=" searchRow row">
+            <div class="col-md-12">
+                <form action="{{ url_for('search_res') }}" method="post">
+                    {{ form.hidden_tag() }}
+                    <p class='searchBox' align='center'>
+                        {{ form.searchQuery.label }}<br>
+                        {{ form.searchQuery(size=32) }}
+                    </p>
+                    <p align='center'>{{ form.submit() }}</p>
+                </form>
+            </div>
+        </div>
+        <!-- <div class ="recentSearches row" align='center'>
+            
+             Recent searches
+             {% for rs in recentSearches %}
+             <div class='alternate-color'><p> <a href="{{url_for('search_res', searchQuery=rs)}}">{{ rs }}</a></p></div>
+             {% endfor %}          
+            
+        </div> -->
+    </div>
+{% endblock %}
